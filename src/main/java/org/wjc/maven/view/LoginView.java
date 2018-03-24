@@ -1,17 +1,11 @@
 package org.wjc.maven.view;
 
-import org.jetbrains.annotations.NotNull;
 import com.vaadin.event.ShortcutAction.KeyCode;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.ui.ValueChangeMode;
-import com.vaadin.ui.Alignment;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.PasswordField;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
-
+import com.vaadin.ui.*;
+import org.jetbrains.annotations.NotNull;
 import org.wjc.maven.constant.CommonConstants;
 
 public class LoginView extends VerticalLayout implements View {
@@ -61,7 +55,12 @@ public class LoginView extends VerticalLayout implements View {
 
         loginStatus.setVisible(false);
 
-        final VerticalLayout layout = new VerticalLayout(usernameText, passwordText, submitButton, loginStatus);
+        Button goToButton = new Button("go to test postgre");
+        goToButton.addClickListener(e -> {
+            getUI().getNavigator().navigateTo(CommonConstants.POSTGRE_VIEW);
+        });
+
+        VerticalLayout layout = new VerticalLayout(usernameText, passwordText, submitButton, loginStatus, goToButton);
         addComponent(layout);
         setComponentAlignment(layout, Alignment.TOP_LEFT);
     }

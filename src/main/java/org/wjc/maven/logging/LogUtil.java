@@ -14,17 +14,17 @@ public final class LogUtil {
         // Disable instantiation
     }
 
+    @NotNull
     public static Logger getLogger(@NotNull final String className) {
         new File(LOGGING_FOLDER).mkdir();
+        Logger logger = Logger.getLogger(className);
         try {
-            Logger logger = Logger.getLogger(className);
             FileHandler handler = new FileHandler(LOGGING_FOLDER + "/" + className + ".txt");
             handler.setFormatter(new LogFormatter());
             logger.addHandler(handler);
-            return logger;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return logger;
     }
 }

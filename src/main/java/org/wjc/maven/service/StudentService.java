@@ -1,13 +1,12 @@
 package org.wjc.maven.service;
 
-import static org.wjc.maven.constant.CommonConstants.ENTITY_MANAGER_FACTORY;
-
-import java.util.List;
+import org.wjc.maven.model.Student;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
-import org.wjc.maven.model.Student;
+import static org.wjc.maven.constant.CommonConstants.ENTITY_MANAGER_FACTORY;
 
 public final class StudentService {
 

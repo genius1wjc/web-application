@@ -1,14 +1,14 @@
 package org.wjc.maven.service;
 
-import static org.wjc.maven.constant.CommonConstants.ENTITY_MANAGER_FACTORY;
+import org.jetbrains.annotations.NotNull;
+import org.wjc.maven.model.Borrower;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-import org.jetbrains.annotations.NotNull;
-import org.wjc.maven.model.Borrower;
+import static org.wjc.maven.constant.CommonConstants.ENTITY_MANAGER_FACTORY;
 
 public final class BorrowerService {
 

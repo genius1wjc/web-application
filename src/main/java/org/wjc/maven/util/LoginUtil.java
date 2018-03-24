@@ -1,14 +1,14 @@
 package org.wjc.maven.util;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 import org.jetbrains.annotations.NotNull;
 import org.wjc.maven.model.Borrower;
 import org.wjc.maven.model.Lender;
 import org.wjc.maven.service.BorrowerService;
 import org.wjc.maven.service.LenderService;
+
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public final class LoginUtil {
 

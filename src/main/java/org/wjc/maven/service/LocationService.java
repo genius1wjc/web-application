@@ -1,16 +1,15 @@
 package org.wjc.maven.service;
 
+import com.maxmind.geoip2.DatabaseReader;
+import com.maxmind.geoip2.model.CityResponse;
+import org.jetbrains.annotations.Nullable;
+import org.wjc.maven.model.Location;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
 import java.net.URL;
-
-import com.maxmind.geoip2.DatabaseReader;
-import com.maxmind.geoip2.model.CityResponse;
-
-import org.jetbrains.annotations.Nullable;
-import org.wjc.maven.model.Location;
 
 public final class LocationService {
 

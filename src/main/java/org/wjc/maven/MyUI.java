@@ -1,21 +1,20 @@
 package org.wjc.maven;
 
-import java.util.logging.Level;
-
-import javax.servlet.annotation.WebServlet;
-
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.UI;
-
 import org.wjc.maven.constant.CommonConstants;
 import org.wjc.maven.logging.LogUtil;
 import org.wjc.maven.view.LocationView;
 import org.wjc.maven.view.LoginView;
+import org.wjc.maven.view.PostgreView;
 import org.wjc.maven.view.UploadView;
+
+import javax.servlet.annotation.WebServlet;
+import java.util.logging.Level;
 
 /**
  * This UI is the application entry point. A UI may either represent a browser
@@ -46,6 +45,7 @@ public class MyUI extends UI {
         navigator.addView(CommonConstants.LOGIN_VIEW, new LoginView());
         navigator.addView(CommonConstants.LOCATION_VIEW, new LocationView());
         navigator.addView(CommonConstants.UPLOAD_VIEW, new UploadView());
+        navigator.addView(CommonConstants.POSTGRE_VIEW, new PostgreView());
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

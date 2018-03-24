@@ -9,6 +9,7 @@ public final class CommonConstants {
     public static final String LOGIN_VIEW = "";
     public static final String LOCATION_VIEW = "location_view";
     public static final String UPLOAD_VIEW = "upload_view";
+    public static final String POSTGRE_VIEW = "postgre_view";
 
     public static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
             .createEntityManagerFactory("BookShare");
